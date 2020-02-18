@@ -1,0 +1,59 @@
+body {
+  padding-top: 6rem;
+  background-color: #2581c8;
+  color: #FFF;
+}
+
+.nav-link {
+  font-size: 1.5em;
+}
+
+.flip-horizontally {
+  transform: scaleX(-1);
+}
+
+.image-container {
+  position:relative;
+  text-align: center;
+
+}
+
+input[type=submit] {
+  margin-top: 15em;
+  margin-left: -20;
+}
+
+.top-image {
+  position: absolute;
+  top:0;
+  left: 3em;
+  z-index: 3;
+  width: 200px;
+}
+
+.bottom-image {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  width: 300px;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .top-image {
+    width: 100px;
+    top: 1.9em;
+  }
+
+  .bottom-image {
+    width: 200px;
+  }
+
+  input[type=submit] {
+    margin-top: 10em;
+  }
+
+}

@@ -1,9 +1,32 @@
 {% extends "foodfight/html/base.html" %}
+{% load static %}
 {% block content %}
-    <!-- The curly braces are the templating syntax. All logic/loops need an ender like endfor or endif -->
-    {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p>By {{ post.author }} on {{ post.date_posted }}</p>
-        <p>{{ post.content }}</p>
-    {% endfor %}
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="image-container">
+          <img src="{% static 'foodfight/images/explosion.svg' %}" class="bottom-image" alt="explosion">
+          <img src="{% static 'foodfight/images/egg.png' %}" class="top-image" alt="egg">
+          <input type="submit" value="alnfl;nglrnklskle;gl;kgn">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="image-container">
+          <img src="{% static 'foodfight/images/explosion.svg' %}" class="flip-horizontally bottom-image" alt="explosion">
+          <img src="{% static 'foodfight/images/egg.png' %}" class="top-image" alt="egg">
+          <input type="submit" value="egg">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <!-- The curly braces are the templating syntax. All logic/loops need an ender like endfor or endif -->
+      <div class="col-12">
+          {% for post in posts %}
+          <h1>{{ post.title }}</h1>
+          <p>By {{ post.author }} on {{ post.date_posted }}</p>
+          <p>{{ post.content }}</p>
+          {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock content %}
